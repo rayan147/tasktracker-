@@ -9,9 +9,9 @@ npm start
 ```
 it is a react app ,so it will try to open on port **3000**
 ### Front techs 
-1.Reactjs
-2.Redux
-3.Material-ui/core and Material-ui/icons
+*.Reactjs
+*.Redux
+*.Material-ui/core and Material-ui/icons
 
 
 
