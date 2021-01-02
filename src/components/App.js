@@ -2,16 +2,22 @@ import TaskList from "./TaskList";
 import {connect} from "react-redux"
 
 function App({lists}) {
-  console.log(lists)
   return (
-    <div>Hello task manager
+    <div style={styles.listsContainer}>
       {lists.map(list => (
-        <TaskList title={list.title} cards={list.cards}></TaskList>
+        <TaskList key={list.id} title={list.title} cards={list.cards}></TaskList>
       ))}
     </div>
   )}
 
-
+const styles ={
+  listsContainer:{
+    display:"flex",
+    justifyContent:"center",
+    marginTop:"3rem"
+  
+  }
+}
  const mapStateToProps = state =>({
    lists:state.lists
  })

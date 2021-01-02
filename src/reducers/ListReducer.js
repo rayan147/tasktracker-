@@ -13,7 +13,38 @@ const initialState =[
         }
         ]
     }
+,
+
+    {
+        title:"Investigation Tickets",
+        id:1,
+        cards:[
+            {
+            id:1,
+            text:"looks wierd "},
+            
+            {
+            id:2,
+            text:"dont know "
+        }
+        ]
+    },
+ {
+        title:"Consul-template",
+        id:2,
+        cards:[
+            {
+            id:1,
+            text:"endpoint doest exits in nginx"},
+            
+            {
+            id:2,
+            text:"Consul-tample not working"
+        }
+        ]
+    }
 ]
+
 const listReducer = (state=initialState,action)=>{
     switch (action.type){
         default:
