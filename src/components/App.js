@@ -13,8 +13,11 @@ function App({lists}) {
 const styles ={
   listsContainer:{
     display:"flex",
-    justifyContent:"center",
-    marginTop:"3rem"
+    justifyContent:"start",
+    flexWrap:"wrap",
+    marginTop:"3rem",
+  
+
   
   }
 }

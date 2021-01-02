@@ -8,7 +8,7 @@ import TaskButton from "./TaskButton"
         </h3>   
 
             {cards.map(card => <TaskCard key={cards.id} text={card.text} />)}
-        <TaskButton list />
+        <TaskButton />
         </div>
         
     )
@@ -18,9 +18,9 @@ const styles ={
     container:{
     borderRadius:3,
     backgroundColor:"#fcc",
-    width:300,
+    width:273,
     padding:8,
-    marginRight:8
+    marginRight :"1rem"
     }
 }
 export default TaskList
