@@ -1,5 +1,6 @@
 import TaskList from "./TaskList";
 import {connect} from "react-redux"
+import TaskButton from "./TaskButton";
 
 function App({lists}) {
   return (
@@ -7,6 +8,7 @@ function App({lists}) {
       {lists.map(list => (
         <TaskList key={list.id} title={list.title} cards={list.cards}></TaskList>
       ))}
+      <TaskButton />
     </div>
   )}
 
