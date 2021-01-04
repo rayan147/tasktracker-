@@ -3,9 +3,9 @@ import AddIcon from '@material-ui/icons/Add';
 import {Card,Button} from "@material-ui/core"
 import TextareaAutosize from 'react-textarea-autosize';
 import CloseIcon from '@material-ui/icons/Close';
-
-
-const TaskButton = ({list}) => {
+import{ addList,addCard} from "../actions"
+import {connect} from "react-redux"
+const TaskButton = ({list,dispatch,listID}) => {
     const [isOpen,setOpen] = useState(false)
     const [text,setText]=useState("")
 
@@ -30,8 +30,25 @@ const TaskButton = ({list}) => {
         )
     }
   const handleInputChange = e =>{
+        e.preventDefault();
       return setText(e.target.value)
   }
+  const handleAddList =()=>{
+
+ if(text){
+     setText("")
+     dispatch(addList(text))
+ }
+ return
+  }
+
+  const handleAddCard =()=> {
+      if(text){
+     setText("")
+          dispatch(addCard(listID,text))
+      }
+  }
+
     const renderForm =()=>{
         const placeholder = list ? "Enter a list title" : "Enter a title for this card" 
         const buttonTitle = list ? "Add list" : "Add Card"
@@ -60,7 +77,7 @@ const TaskButton = ({list}) => {
             </Card>
 
             <div style={styles.formButtonGroup} >
-        <Button varient="contained" style={{color:"white",backgroundColor:"green"}}> {buttonTitle}</Button>
+        <Button onMouseDown={list ? handleAddList : handleAddCard} varient="contained" style={{color:"white",backgroundColor:"green"}}> {buttonTitle}</Button>
         <CloseIcon  style={{marginTop:5,cursor:"pointer"}}/>
             </div>
         </div>
@@ -89,4 +106,5 @@ const styles ={
         aliginItems:"center"
     }
 }
-export default TaskButton
+
+export default connect()(TaskButton)

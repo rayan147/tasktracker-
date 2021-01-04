@@ -6,9 +6,9 @@ function App({lists}) {
   return (
     <div style={styles.listsContainer}>
       {lists.map(list => (
-        <TaskList key={list.id} title={list.title} cards={list.cards}></TaskList>
+        <TaskList listID={list.id} key={list.id} title={list.title} cards={list.cards}></TaskList>
       ))}
-      <TaskButton />
+      <TaskButton list/>
     </div>
   )}
 
