@@ -11,7 +11,8 @@ it is a react app ,so it will try to open on port **3000**
 ### Front techs 
 * Reactjs
 * Redux
-* Material-ui/core and Material-ui/icons
+* Material-ui/
+* React-icons
 
 
 
