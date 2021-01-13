@@ -45,7 +45,7 @@ const CreateInput = styled.input`
 `;
 
 const Home = ({ boards, boardOrder, dispatch }) => {
-  // this is the home  site that shows you your boards and you can also create a Board here.
+  // .this is the home  site that shows you your boards and you can also create a Board here.
 
   const [newBoardTitle, setNewBoardTitle] = useState("");
 
