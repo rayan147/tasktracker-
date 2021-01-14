@@ -10,7 +10,14 @@ import { AiFillBackward } from "react-icons/ai";
 const ListsContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  padding:5px;
 `;
+
+const ListContainerChild =styled.div`
+text-align:center;
+margin:5px;  /* and that, will result in a 10px gap */
+`
 
 // TODO: Fix performance issue
 
@@ -66,13 +73,14 @@ class TrelloBoard extends PureComponent {
                   const listCards = list.cards.map(cardID => cards[cardID]);
 
                   return (
+                    <ListContainerChild>
                     <TrelloList
                       listID={list.id}
                       key={list.id}
                       title={list.title}
                       cards={listCards}
                       index={index}
-                    />
+                    /></ListContainerChild>
                   );
                 }
               })}
