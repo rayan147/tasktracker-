@@ -80,7 +80,7 @@ const Home = ({ boards, boardOrder, dispatch }) => {
         <CreateInput
           onChange={handleChange}
           value={newBoardTitle}
-          placeholder="Create a new Board"
+          placeholder="Create a new Board..."
           type="text"
         />
       </form>
